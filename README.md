@@ -245,8 +245,6 @@ Observe the signals using the various visualization blocks in the flowgraphs:
 
 | Type | Resource |
 
-| :--- | :--- |
-
 | 🎓 GNU Radio Docs | [https://wiki.gnuradio.org](https://wiki.gnuradio.org) |
 
 | 📘 SDR Concepts | [https://www.rtl-sdr.com](https://www.rtl-sdr.com) |
@@ -318,8 +316,6 @@ Advanced Communication Technology
 
 
 | **🔗 LinkedIn** | **|** | **GitHub** |
-
-| :--- | :--- | :--- | :--- |
 
 | [Connect on LinkedIn](https://www.linkedin.com/in/vignesh-g-0331a8294/) | | [View GitHub Profile](https://github.com/vigneshrmkec27) |
 
