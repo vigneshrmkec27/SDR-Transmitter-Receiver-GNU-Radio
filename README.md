@@ -58,13 +58,11 @@ This project demonstrates Amplitude Modulation (AM) and Demodulation using GNU R
 
 Open your terminal and run the following commands to install GNU Radio:
 
-```bash
+
 sudo apt update
 sudo apt install gnuradio
 
-That looks like a well-structured and detailed project guide! Here is the entire content formatted into a clean GitHub README Markdown file, exactly as requested:
 
-Markdown
 
 # Software Defined Radio (SDR) Amplitude Modulation (AM) Project
 
@@ -78,16 +76,16 @@ This project demonstrates Amplitude Modulation (AM) and Demodulation using GNU R
 
 Open your terminal and run the following commands to install GNU Radio:
 
-```bash
 sudo apt update
 sudo apt install gnuradio
+
 📡 Step 2: Connect SDR Device (Optional)
 If you have an SDR (like RTL-SDR, HackRF, or USRP), plug it in. You can check if the system recognizes an RTL-SDR device using:
 
 
 
 
-````markdown
+
 
 # Software Defined Radio (SDR) Amplitude Modulation (AM) Project
 
@@ -125,7 +123,7 @@ Open your terminal and run the following commands to install GNU Radio:
 
 
 
-```bash
+
 
 sudo apt update
 
@@ -147,7 +145,7 @@ If you have an SDR (like RTL-SDR, HackRF, or USRP), plug it in. You can check if
 
 
 
-```bash
+
 
 rtl_test
 
