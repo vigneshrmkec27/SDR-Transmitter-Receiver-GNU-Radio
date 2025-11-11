@@ -148,10 +148,7 @@ By completing this project, you will learn:
 
 ## 🧰 References
 
-* [GNU Radio Documentation](https://wiki.gnuradio.org/index.php/Main_Page)
-* [RTL-SDR Quick Start Guide](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
-* [SDR Basics: Analog Modulation](https://wiki.gnuradio.org/index.php/Category:Analog_Modulation)
-* [HackRF One Documentation](https://greatscottgadgets.com/hackrf/)
+* [SDR Basics: Amplitude Modulation](https://wiki.gnuradio.org/index.php/Simulation_example:_AM_transmitter_and_receiver)
 
 ---
 
