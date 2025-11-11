@@ -1,354 +1,175 @@
-# 🎧 AM Transmitter and Receiver using SDR and GNU Radio
-
-This project demonstrates **Amplitude Modulation (AM) Transmission and Reception** using **Software Defined Radio (SDR)** and **GNU Radio Companion (GRC)**.  
-It includes flowgraphs that show how an analog signal can be modulated, transmitted, and received — all in software, without needing complex RF hardware setups.
 
 ---
 
-## 📜 Project Overview
+# 📡 AM Transmitter & Receiver using SDR and GNU Radio Companion
 
-**Objective:**  
-To design and implement an **AM Transmitter** and **Receiver** using **GNU Radio** and an SDR platform, visualizing the modulation and demodulation process in real-time.
-
-**Key Concepts Covered:**
-- Analog Modulation (Amplitude Modulation)
-- Software Defined Radio fundamentals
-- Flowgraph design in GNU Radio Companion
-- Real-time signal visualization (Scope, FFT, Waterfall)
+This project demonstrates the **Amplitude Modulation (AM) transmission and reception** process using **Software Defined Radio (SDR)** and **GNU Radio Companion (GRC)**.
+It helps understand the fundamentals of analog communication by implementing AM signal generation, modulation, transmission, and demodulation in a software environment.
 
 ---
 
-## ⚙️ Technologies & Tools Used
+## 🧠 Project Overview
 
-| Component | Description |
-|------------|--------------|
-| **GNU Radio** | Open-source toolkit for signal processing |
-| **GNU Radio Companion (GRC)** | GUI tool for building signal flowgraphs |
-| **SDR Hardware (Optional)** | RTL-SDR / HackRF / USRP / Any supported SDR device |
-| **Python** | Backend flow execution language for GNU Radio |
-| **Ubuntu / Windows Subsystem for Linux** | Recommended OS environment |
+The project simulates an **AM Transmitter and Receiver** system using GNU Radio blocks.
+It can transmit an audio signal (such as a .wav file or microphone input) and receive it back using an SDR or loopback configuration.
 
 ---
 
-## 🧩 Project Structure
+## ⚙️ Features
 
-📁 AM-Trans-and-Rec-SDR
-│
-├── 📂 transmitter
-│ └── am_tx.grc # Flowgraph for AM Transmission
-│
-├── 📂 receiver
-│ └── am_rx.grc # Flowgraph for AM Reception
-│
-├── 📄 README.md # Documentation (this file)
-└── 📄 requirements.txt # (Optional) Dependencies for setup
-
+* 🎧 **Audio Input & Output** (Microphone or Audio File)
+* 🧩 **AM Modulation and Demodulation**
+* ⚡ **Adjustable Carrier Frequency and Gain**
+* 🔁 **Real-Time Transmission & Reception**
+* 💻 **Can Work Without SDR Hardware (Simulation Mode)**
 
 ---
 
-# Software Defined Radio (SDR) Amplitude Modulation (AM) Project
+## 🧩 System Requirements
 
-This project demonstrates Amplitude Modulation (AM) and Demodulation using GNU Radio and a Software Defined Radio (SDR) device.
+| Component             | Description                          |
+| --------------------- | ------------------------------------ |
+| **Software**          | GNU Radio Companion (v3.8 or higher) |
+| **Optional Hardware** | RTL-SDR, HackRF, or USRP             |
+| **Operating System**  | Linux / Windows / macOS              |
+| **Dependencies**      | Python 3.x (included with GNU Radio) |
 
 ---
 
 ## 🚀 How to Run the Project
 
 ### 🔧 Step 1: Install GNU Radio
-
-Open your terminal and run the following commands to install GNU Radio:
-
-
-sudo apt update
-sudo apt install gnuradio
-
-
-
-# Software Defined Radio (SDR) Amplitude Modulation (AM) Project
-
-This project demonstrates Amplitude Modulation (AM) and Demodulation using GNU Radio and a Software Defined Radio (SDR) device.
-
----
-
-## 🚀 How to Run the Project
-
-### 🔧 Step 1: Install GNU Radio
-
-Open your terminal and run the following commands to install GNU Radio:
-
-sudo apt update
-sudo apt install gnuradio
-
-📡 Step 2: Connect SDR Device (Optional)
-If you have an SDR (like RTL-SDR, HackRF, or USRP), plug it in. You can check if the system recognizes an RTL-SDR device using:
-
-
-
-
-
-
-# Software Defined Radio (SDR) Amplitude Modulation (AM) Project
-
-
-
-This project demonstrates Amplitude Modulation (AM) and Demodulation using GNU Radio and a Software Defined Radio (SDR) device.
-
-
-
----
-
-## 🛠️ Project Status
-
-[![GitHub license](https://img.shields.io/github/license/VigneshG/SDR-AM-Project?style=flat-square)](LICENSE)
-
-[![GitHub stars](https://img.shields.io/github/stars/VigneshG/SDR-AM-Project?style=flat-square&color=yellow)](https://github.com/VigneshG/SDR-AM-Project/stargazers)
-
-[![Built with GNU Radio](https://img.shields.io/badge/Built%20with-GNU%20Radio-blue.svg?style=flat-square&logo=gnu-radio)](https://www.gnuradio.org/)
-
-
-
----
-
-
-
-## 🚀 How to Run the Project
-
-
-
-### 🔧 Step 1: Install GNU Radio
-
-
-
-Open your terminal and run the following commands to install GNU Radio:
-
-
-
-
-
-sudo apt update
-
-sudo apt install gnuradio
-
-````
-
-
-
------
-
-
-
-### 📡 Step 2: Connect SDR Device (Optional)
-
-
-
-If you have an SDR (like RTL-SDR, HackRF, or USRP), plug it in. You can check if the system recognizes an RTL-SDR device using:
-
-
-
-
-
-rtl_test
-
-```
-
-
-
------
-
-
-
-### 🧠 Step 3: Open Flowgraphs
-
-
-
-Open GNU Radio Companion from your terminal:
-
-
 
 ```bash
+sudo apt update
+sudo apt install gnuradio
+```
 
+### 📂 Step 2: Clone this Repository
+
+```bash
+git clone https://github.com/<your-username>/am-transmitter-receiver.git
+cd am-transmitter-receiver
+```
+
+### 📡 Step 3: Connect SDR Device (Optional)
+
+If you have an SDR such as **RTL-SDR**, **HackRF**, or **USRP**, connect it and test:
+
+```bash
+rtl_test
+```
+
+### 🧠 Step 4: Open Flowgraphs
+
+Open **GNU Radio Companion**:
+
+```bash
 gnuradio-companion
-
 ```
 
+Then open:
 
+* `am_transmitter.grc`
+* `am_receiver.grc`
 
-Then, load the respective flowgraphs from the project directory:
+---
 
+## ▶️ Execution Steps
 
+1. **Run the Transmitter flowgraph** – generates and transmits the AM signal.
+2. **Run the Receiver flowgraph** – receives and demodulates the AM signal.
+3. Output can be played through speakers or visualized using a Scope Sink.
 
-  * Load `am_tx.grc` for **transmission**
+---
 
-  * Load `am_rx.grc` for **reception**
+## 🧱 Block Diagram Overview
 
-
-
------
-
-
-
-### ▶️ Step 4: Run the Flowgraphs
-
-
-
-1.  Execute the **transmitter** flowgraph first.
-
-2.  Then run the **receiver** flowgraph.
-
-
-
-Observe the signals using the various visualization blocks in the flowgraphs:
-
-
-
-  * **Time Sink**
-
-  * **FFT Sink**
-
-  * **Waterfall Sink**
-
-
-
------
-
-
-
-### 📈 Expected Output
-
-
-
-  * **Transmitter:** Converts a baseband audio signal into an AM-modulated RF signal.
-
-  * **Receiver:** Demodulates the AM signal and retrieves the original audio.
-
-
-
-**Visualizations:**
-
-
-
-  * FFT plot showing the **carrier + sidebands**.
-
-  * Time-domain waveform of the **modulated and demodulated signal**.
-
-
-
------
-
-
-
-### 📚 Resources & References
-
-
-
-| Type | Resource |
-
-| 🎓 GNU Radio Docs | [https://wiki.gnuradio.org](https://wiki.gnuradio.org) |
-
-| 📘 SDR Concepts | [https://www.rtl-sdr.com](https://www.rtl-sdr.com) |
-
-| 🎥 Tutorial Video | HackRF + GNU Radio AM Tutorial (YouTube) |
-
-| 📗 Book | Software Defined Radio using MATLAB & Simulink and the RTL-SDR – Robert W. Stewart |
-
-| 🧩 GitHub Example | [https://github.com/gnuradio/gnuradio](https://github.com/gnuradio/gnuradio) |
-
-
-
------
-
-
-
-### 🧠 Learning Outcomes
-
-
-
-By completing this project, you will:
-
-
-
-  * Understand **Amplitude Modulation** principles.
-
-  * Learn to design signal flowgraphs in **GNU Radio**.
-
-  * Visualize **modulation, transmission, and demodulation** in real-time.
-
-  * Experience hands-on **SDR-based communication systems**.
-
-
-
------
-
-
-
-### 💡 Future Enhancements
-
-
-
-  * Add Frequency Modulation (FM) or SSB mode.
-
-  * Implement Noise filtering.
-
-  * Integrate USRP hardware for long-range communication.
-
-  * Add a GUI-based control panel using PyQt or Tkinter.
-
-
-
------
-
-
-
-### 👨‍💻 Author
-
-
-
-**Vignesh G**
-
-Advanced Communication Technology
-
-
-
-📫 Feel free to connect or star this repo if you find it helpful\!
-
-
-
-| **🔗 LinkedIn** | **|** | **GitHub** |
-
-| [Connect on LinkedIn](https://www.linkedin.com/in/vignesh-g-0331a8294/) | | [View GitHub Profile](https://github.com/vigneshrmkec27) |
-
-
-
------
-
-
-
-### 🪪 License
-
-
-
-This project is licensed under the **MIT License** — feel free to use and modify for educational purposes.
-
-
-
------
-
-
-
-### 🌟 Support & Contributions
-
-
-
-Contributions, issues, and feature requests are welcome\!
-
-Feel free to fork this repository and submit a pull request.
-
-
-
-If you found this project useful, please ⭐ it on GitHub\!
-
-
+### **Transmitter Flowgraph**
 
 ```
+Audio Source → Multiply (Carrier Signal) → Throttle → SDR Sink / Audio Sink
+```
+
+### **Receiver Flowgraph**
 
 ```
+SDR Source / File Source → Envelope Detector → Audio Sink
+```
+
+---
+
+## 🎥 Demo & Results
+
+Below are sample visual results you can showcase in your README once you run your project 👇
+
+### 🖼️ **1. Transmitted Signal (Time Domain)**
+
+![Transmitter Waveform](resources/transmitter_waveform.png)
+
+### 🌈 **2. Spectrum of AM Signal**
+
+![Spectrum of AM Signal](resources/am_spectrum.png)
+
+### 🎧 **3. Demodulated Audio Output**
+
+![Demodulated Audio](resources/demodulated_audio.png)
+
+> You can capture these plots using the **QT GUI Time Sink** and **QT GUI Frequency Sink** blocks in GNU Radio.
+
+---
+
+## 📘 Learning Outcomes
+
+By completing this project, you will learn:
+
+* ✅ The principle of **Amplitude Modulation (AM)**
+* ✅ How to **design flowgraphs** in GNU Radio
+* ✅ Understanding of **SDR signal processing chain**
+* ✅ Hands-on skills in **modulation, demodulation, and real-time signal flow**
+
+---
+
+## 📁 Project Structure
+
+```
+📦 am-transmitter-receiver/
+├── am_transmitter.grc
+├── am_receiver.grc
+├── README.md
+└── resources/
+    ├── sample_audio.wav
+    ├── transmitter_waveform.png
+    ├── am_spectrum.png
+    └── demodulated_audio.png
+```
+
+---
+
+## 🧰 References
+
+* [GNU Radio Documentation](https://wiki.gnuradio.org/index.php/Main_Page)
+* [RTL-SDR Quick Start Guide](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
+* [SDR Basics: Analog Modulation](https://wiki.gnuradio.org/index.php/Category:Analog_Modulation)
+* [HackRF One Documentation](https://greatscottgadgets.com/hackrf/)
+
+---
+
+## 🧑‍💻 Author
+
+* **Vignesh G**
+* **Advanced Communication Technology**
+* 📍 **R.M.K Engineering College**
+
+💬 *“Exploring the world of wireless communication through SDR.”*
+
+If you found this helpful, ⭐ **star this repository** to support future projects!
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – you are free to use and modify it.
+
+---
+
